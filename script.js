@@ -1,0 +1,1 @@
+[ "User", "Command", "Command_Product", "Product", "Product_Picture", "Product_Type", "Review" ].forEach( collName => db.createCollection( collName ) );
