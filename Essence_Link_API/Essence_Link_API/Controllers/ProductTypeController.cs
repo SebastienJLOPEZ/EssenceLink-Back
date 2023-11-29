@@ -4,6 +4,10 @@ using Essence_Link_API.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Essence_Link_API.Controllers;
+
+[ApiController]
+[Route("v1/api/[controller]")]
+
 public class ProductTypeController : Controller
 {
     private readonly ProductTypeService _ProductTypeService;

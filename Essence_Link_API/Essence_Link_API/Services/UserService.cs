@@ -11,13 +11,13 @@ public class UserService
         IOptions<ELDatabaseSettings> elDatabaseSettings)
     {
         var mongoClient = new MongoClient(
-            elDatabaseSettings.Value.ConnectionString );
+            elDatabaseSettings.Value.ConnectionString);
 
         var mongoDatabase = mongoClient.GetDatabase(
-            elDatabaseSettings.Value.DatabaseName );
+            elDatabaseSettings.Value.DatabaseName);
 
         _UserCollection = mongoDatabase.GetCollection<User>(
-            elDatabaseSettings.Value.UserCollectionName );
+            elDatabaseSettings.Value.UserCollectionName);
     }
 
     public async Task<List<User>> GetAsync() =>
@@ -25,6 +25,8 @@ public class UserService
 
     public async Task<User?> GetAsync(string id) =>
         await _UserCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
+
+    //TODO : Code to find lastest element of list
 
     public async Task CreateAsync(User newUser) =>
         await _UserCollection.InsertOneAsync(newUser);

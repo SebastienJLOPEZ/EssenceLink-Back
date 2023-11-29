@@ -4,6 +4,9 @@ using Essence_Link_API.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Essence_Link_API.Controllers;
+
+[ApiController]
+[Route("v1/api/[controller]")]
 public class ReviewController : Controller
 {
     private readonly ReviewService _ReviewService;
@@ -28,7 +31,7 @@ public class ReviewController : Controller
         return Review;
     }
 
-    [HttpGet("Stars")]
+    [HttpGet("{Stars}")]
     public async Task<List<Review>> GetS(decimal stars) =>
         await _ReviewService.GetAsyncS(stars);
 

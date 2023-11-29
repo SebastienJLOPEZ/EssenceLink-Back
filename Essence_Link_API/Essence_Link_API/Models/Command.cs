@@ -5,7 +5,7 @@ namespace Essence_Link_API.Models;
 public class Command
 {
     [BsonId]
-    [BsonRepresentation(BsonType.String)]
+    [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
 
     public string UserId { get; set; } = null!;

@@ -5,14 +5,31 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("BaseAccess",
+        policy =>
+        {
+            policy.WithOrigins("*"); //Nedd to change later
+        }
+        );
+});
+
 builder.Services.Configure<ELDatabaseSettings>(
-    builder.Configuration.GetSection("ELDatabse"));
+    builder.Configuration.GetSection("ELDatabase"));
 
 builder.Services.AddSingleton<UserService>();
+builder.Services.AddSingleton<ProductTypeService>();
+builder.Services.AddSingleton<ProductPictureService>();
+builder.Services.AddSingleton<ReviewService>();
+builder.Services.AddSingleton<CommandService>();
+builder.Services.AddSingleton<CommandProductService>();
+builder.Services.AddSingleton<ProductService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(
     options => options.JsonSerializerOptions.PropertyNamingPolicy = null);
+
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

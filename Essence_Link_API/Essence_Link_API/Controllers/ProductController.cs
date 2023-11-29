@@ -4,6 +4,10 @@ using Essence_Link_API.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Essence_Link_API.Controllers;
+
+[ApiController]
+[Route("v1/api/[controller]")]
+
 public class ProductController : Controller
 {
     private readonly ProductService _ProductService;
@@ -28,7 +32,7 @@ public class ProductController : Controller
         return Product;
     }
 
-    [HttpGet("Type")]
+    [HttpGet("{Type}")]
     public async Task<List<Product>> GetT(string type) =>
         await _ProductService.GetAsyncT(type);
 

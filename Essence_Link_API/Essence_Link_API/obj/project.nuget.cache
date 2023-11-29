@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1rRIotGtEj36/aAc+iZewyTc6RMbdjEhfYjmIiKxIdnh50rqFIPMhpgajZTi0XsR0H4wmiLRjUExFaeXv/80tA==",
+  "dgSpecHash": "w2PGqk+FpFwf7QenmDBxtcRhs0d5v0m2/BwxOo3cjvaHA4UAlX8iTTwFDN11xykZthORFGd2fhcWVtZJIPxGYQ==",
   "success": true,
-  "projectFilePath": "D:\\Documents\\S04\\Projet\\Essence_Link_API\\Essence_Link_API\\Essence_Link_API.csproj",
+  "projectFilePath": "D:\\Documents\\S04\\Projet\\EssenceLink\\essencelink_backend\\Essence_Link_API\\Essence_Link_API\\Essence_Link_API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Sébastien\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Sébastien\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",

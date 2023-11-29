@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Essence_Link_API.props" />
+</Project>

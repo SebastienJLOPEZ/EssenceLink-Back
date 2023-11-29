@@ -1216,11 +1216,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\S04\\Projet\\Essence_Link_API\\Essence_Link_API\\Essence_Link_API.csproj",
+      "projectUniqueName": "D:\\Documents\\S04\\Projet\\EssenceLink\\essencelink_backend\\Essence_Link_API\\Essence_Link_API\\Essence_Link_API.csproj",
       "projectName": "Essence_Link_API",
-      "projectPath": "D:\\Documents\\S04\\Projet\\Essence_Link_API\\Essence_Link_API\\Essence_Link_API.csproj",
+      "projectPath": "D:\\Documents\\S04\\Projet\\EssenceLink\\essencelink_backend\\Essence_Link_API\\Essence_Link_API\\Essence_Link_API.csproj",
       "packagesPath": "C:\\Users\\Sébastien\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\S04\\Projet\\Essence_Link_API\\Essence_Link_API\\obj\\",
+      "outputPath": "D:\\Documents\\S04\\Projet\\EssenceLink\\essencelink_backend\\Essence_Link_API\\Essence_Link_API\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

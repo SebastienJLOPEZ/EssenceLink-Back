@@ -5,7 +5,7 @@ namespace Essence_Link_API.Models;
 public class ProductType
 {
     [BsonId]
-    [BsonRepresentation(BsonType.String)]
+    [BsonRepresentation(BsonType.ObjectId)]
     public string? Id { get; set; }
 
     public string Name { get; set; } = null!;
