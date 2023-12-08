@@ -5,14 +5,37 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+//NTODO :
+//Change CORS so only the project site can connect to it
+//
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("BaseAccess",
+    options.AddPolicy(name: "BaseAccess",
         policy =>
         {
-            policy.WithOrigins("*"); //Nedd to change later
+            policy
+            .WithOrigins("http://localhost:8080/*")
+            .AllowAnyMethod()
+            .AllowAnyHeader();
         }
         );
+    options.AddPolicy("ClientAdminAccess",
+        policy =>
+        {
+            policy
+              .WithOrigins("http://localhost:8080/ClientAdmin/")
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+        });
+    options.AddPolicy("ProductAdminAccess",
+        policy =>
+        {
+            policy
+              .WithOrigins("http://localhost:8080/ProductAdmin/")
+              .AllowAnyMethod()
+              .AllowAnyHeader();
+        });
 });
 
 builder.Services.Configure<ELDatabaseSettings>(
@@ -25,6 +48,7 @@ builder.Services.AddSingleton<ReviewService>();
 builder.Services.AddSingleton<CommandService>();
 builder.Services.AddSingleton<CommandProductService>();
 builder.Services.AddSingleton<ProductService>();
+builder.Services.AddSingleton<WishlistService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(

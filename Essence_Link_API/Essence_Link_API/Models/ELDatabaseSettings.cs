@@ -10,5 +10,6 @@ public class ELDatabaseSettings
     public string ReviewCollectionName { get; set; } = null!;
     public string CommandCollectionName { get; set; } = null!;
     public string CommandProductCollectionName { get; set; } = null!;
+    public string WishlistCollectionName { get; set; } = null!;
 
 }

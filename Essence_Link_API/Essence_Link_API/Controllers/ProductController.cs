@@ -1,6 +1,7 @@
 ﻿//using Microsoft.AspNetCore.Http;
 using Essence_Link_API.Models;
 using Essence_Link_API.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Essence_Link_API.Controllers;
@@ -51,6 +52,7 @@ public class ProductController : Controller
     }
 
     [HttpPut("{id:length(24)}")]
+    [Authorize("ProductAdminAccess")]
     public async Task<IActionResult> Update(string id, Product updatedProduct)
     {
         //TODO:
@@ -65,6 +67,7 @@ public class ProductController : Controller
     }
 
     [HttpDelete("{id;length(24)}")]
+    [Authorize("ProductAdminAccess")]
     public async Task<IActionResult> Delete(string id)
     {
         //TODO:

@@ -1,10 +1,13 @@
 ﻿//using Microsoft.AspNetCore.Http;
 using Essence_Link_API.Models;
 using Essence_Link_API.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Essence_Link_API.Controllers;
 
+[EnableCors("BaseAccess")]
 [ApiController]
 [Route("v1/api/[controller]")]
 
@@ -16,10 +19,12 @@ public class UserController : Controller
         _userService = userService;
 
     [HttpGet]
+    [Authorize("ClientAdminAccess")]
     public async Task<List<User>> Get() =>
         await _userService.GetAsync();
 
-    [HttpGet("{id:length(24)}")]
+    [HttpGet("{id}")]
+    [Authorize("BaseAccess")]
     public async Task<ActionResult<User>> Get(string id)
     {
         var User = await _userService.GetAsync(id);
@@ -33,6 +38,7 @@ public class UserController : Controller
     }
 
     [HttpPost]
+    //[Authorize]
     public async Task<IActionResult> Post(User newUser)
     {
         await _userService.CreateAsync(newUser);
@@ -40,6 +46,7 @@ public class UserController : Controller
         return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
     }
 
+    [Authorize]
     [HttpPut("{id:length(24)}")]
     public async Task<IActionResult> Update(string id, User updatedUser)
     {
@@ -55,6 +62,7 @@ public class UserController : Controller
     }
 
     [HttpDelete("{id;length(24)}")]
+    //[Authorize("ClientAdminAccess")]
     public async Task<IActionResult> Delete(string id)
     {
         //TODO:

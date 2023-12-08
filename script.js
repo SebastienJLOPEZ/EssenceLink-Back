@@ -1,4 +1,7 @@
-const collectionNames = [ "User", "Command", "Command_Product", "Product", "Product_Picture", "Product_Type", "Review" ]
+const dbName = "EssenceLinkDB";
+const db = db.getSiblingDB(dbName);
+
+const collectionNames = [ "User", "Command", "Command_Product", "Product", "Product_Picture", "Product_Type", "Review", "Wishlist" ]
 
 collectionNames.forEach( collName => db.createCollection( collName ) );
 

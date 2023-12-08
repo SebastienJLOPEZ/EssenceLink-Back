@@ -1,10 +1,13 @@
 ﻿//using Microsoft.AspNetCore.Http;
 using Essence_Link_API.Models;
 using Essence_Link_API.Services;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Essence_Link_API.Controllers;
 
+[EnableCors("BaseAccess")]
 [ApiController]
 [Route("v1/api/[controller]")]
 public class CommandProductController : Controller
@@ -15,10 +18,12 @@ public class CommandProductController : Controller
         _CommandProductService = CommandProductService;
 
     [HttpGet]
+    [Authorize]
     public async Task<List<CommandProduct>> Get() =>
         await _CommandProductService.GetAsync();
 
     [HttpGet("{id:length(24)}")]
+    [Authorize]
     public async Task<ActionResult<CommandProduct>> Get(string id)
     {
         var CommandProduct = await _CommandProductService.GetAsync(id);
@@ -32,6 +37,7 @@ public class CommandProductController : Controller
     }
 
     [HttpPost]
+    [Authorize]
     public async Task<IActionResult> Post(CommandProduct newCommandProduct)
     {
         await _CommandProductService.CreateAsync(newCommandProduct);
@@ -40,6 +46,7 @@ public class CommandProductController : Controller
     }
 
     [HttpPut("{id:length(24)}")]
+    [Authorize]
     public async Task<IActionResult> Update(string id, CommandProduct updatedCommandProduct)
     {
         //TODO:
@@ -54,6 +61,8 @@ public class CommandProductController : Controller
     }
 
     [HttpDelete("{id;length(24)}")]
+    [Authorize("ClientAdminAccess")]
+
     public async Task<IActionResult> Delete(string id)
     {
         //TODO:
