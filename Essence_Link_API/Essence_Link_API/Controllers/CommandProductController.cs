@@ -18,12 +18,12 @@ public class CommandProductController : Controller
         _CommandProductService = CommandProductService;
 
     [HttpGet]
-    [Authorize]
+    
     public async Task<List<CommandProduct>> Get() =>
         await _CommandProductService.GetAsync();
 
     [HttpGet("{id:length(24)}")]
-    [Authorize]
+    
     public async Task<ActionResult<CommandProduct>> Get(string id)
     {
         var CommandProduct = await _CommandProductService.GetAsync(id);
@@ -37,7 +37,7 @@ public class CommandProductController : Controller
     }
 
     [HttpPost]
-    [Authorize]
+    
     public async Task<IActionResult> Post(CommandProduct newCommandProduct)
     {
         await _CommandProductService.CreateAsync(newCommandProduct);
@@ -46,7 +46,7 @@ public class CommandProductController : Controller
     }
 
     [HttpPut("{id:length(24)}")]
-    [Authorize]
+    
     public async Task<IActionResult> Update(string id, CommandProduct updatedCommandProduct)
     {
         //TODO:

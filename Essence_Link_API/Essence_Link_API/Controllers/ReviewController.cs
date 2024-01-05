@@ -18,12 +18,12 @@ public class ReviewController : Controller
         _ReviewService = ReviewService;
 
     [HttpGet]
-    [Authorize]
+    
     public async Task<List<Review>> Get() =>
         await _ReviewService.GetAsync();
 
     [HttpGet("{id:length(24)}")]
-    [Authorize]
+    
     public async Task<ActionResult<Review>> Get(string id)
     {
         var Review = await _ReviewService.GetAsync(id);
@@ -37,12 +37,12 @@ public class ReviewController : Controller
     }
 
     [HttpGet("{Stars}")]
-    [Authorize]
+    
     public async Task<List<Review>> GetS(decimal stars) =>
         await _ReviewService.GetAsyncS(stars);
 
     [HttpPost]
-    [Authorize]
+    
     public async Task<IActionResult> Post(Review newReview)
     {
         await _ReviewService.CreateAsync(newReview);
@@ -51,7 +51,7 @@ public class ReviewController : Controller
     }
 
     [HttpPut("{id:length(24)}")]
-    [Authorize]
+    
     public async Task<IActionResult> Update(string id, Review updatedReview)
     {
         //TODO:
@@ -66,7 +66,7 @@ public class ReviewController : Controller
     }
 
     [HttpDelete("{id;length(24)}")]
-    [Authorize]
+    
     public async Task<IActionResult> Delete(string id)
     {
         //TODO:

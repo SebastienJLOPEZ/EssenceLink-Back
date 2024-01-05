@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Essence_Link_API.Controllers;
 
-[EnableCors("ProductAdminAccess")]
+[EnableCors("BaseAccess")]
 [ApiController]
 [Route("v1/api/[controller]")]
 
@@ -19,13 +19,13 @@ public class ProductTypeController : Controller
         _ProductTypeService = ProductTypeService;
 
     [HttpGet]
-    [Authorize("BaseAccess")]
+    //[Authorize("BaseAccess")]
 
     public async Task<List<ProductType>> Get() =>
         await _ProductTypeService.GetAsync();
 
     [HttpGet("{id:length(24)}")]
-    [Authorize]
+    //
     public async Task<ActionResult<ProductType>> Get(string id)
     {
         var ProductType = await _ProductTypeService.GetAsync(id);
@@ -39,7 +39,7 @@ public class ProductTypeController : Controller
     }
 
     [HttpPost]
-    [Authorize]
+    
     public async Task<IActionResult> Post(ProductType newProductType)
     {
         await _ProductTypeService.CreateAsync(newProductType);
@@ -48,7 +48,7 @@ public class ProductTypeController : Controller
     }
 
     [HttpPut("{id:length(24)}")]
-    [Authorize]
+    
     public async Task<IActionResult> Update(string id, ProductType updatedProductType)
     {
         //TODO:
@@ -63,7 +63,7 @@ public class ProductTypeController : Controller
     }
 
     [HttpDelete("{id;length(24)}")]
-    [Authorize]
+    
     public async Task<IActionResult> Delete(string id)
     {
         //TODO:

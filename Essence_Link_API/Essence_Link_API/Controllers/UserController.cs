@@ -7,27 +7,24 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Essence_Link_API.Controllers;
 
-[EnableCors("BaseAccess")]
 [ApiController]
 [Route("v1/api/[controller]")]
-
+[EnableCors("BaseAccess")]
 public class UserController : Controller
 {
-    private readonly UserService _userService;
+    private readonly UserService _UserService;
 
-    public UserController(UserService userService) =>
-        _userService = userService;
+    public UserController(UserService UserService) =>
+        _UserService = UserService;
 
     [HttpGet]
-    [Authorize("ClientAdminAccess")]
     public async Task<List<User>> Get() =>
-        await _userService.GetAsync();
+        await _UserService.GetAsync();
 
     [HttpGet("{id}")]
-    [Authorize("BaseAccess")]
     public async Task<ActionResult<User>> Get(string id)
     {
-        var User = await _userService.GetAsync(id);
+        var User = await _UserService.GetAsync(id);
 
         if (User is null)
         {
@@ -37,43 +34,47 @@ public class UserController : Controller
         return User;
     }
 
+    
+
     [HttpPost]
-    //[Authorize]
     public async Task<IActionResult> Post(User newUser)
     {
-        await _userService.CreateAsync(newUser);
+
+        await _UserService.CreateAsync(newUser);
 
         return CreatedAtAction(nameof(Get), new { id = newUser.Id }, newUser);
     }
 
-    [Authorize]
-    [HttpPut("{id:length(24)}")]
+    [HttpPut("{id}")]
     public async Task<IActionResult> Update(string id, User updatedUser)
     {
         //TODO:
         //Updater without need of all data
-        var User = await _userService.GetAsync(id);
+        var User = await _UserService.GetAsync(id);
         if (User is null)
         {
             return NotFound();
         }
+
+        updatedUser.Id = User.Id;
+
+        await _UserService.UpdateAsync(id, updatedUser);
 
         return NoContent();
     }
 
-    [HttpDelete("{id;length(24)}")]
-    //[Authorize("ClientAdminAccess")]
+    [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(string id)
     {
         //TODO:
         //Change it so it doesn't delete but hash it instead
-        var User = await _userService.GetAsync(id);
+        var User = await _UserService.GetAsync(id);
         if (User is null)
         {
             return NotFound();
         }
 
-        await _userService.RemoveAsync(id);
+        await _UserService.RemoveAsync(id);
 
         return NoContent();
     }

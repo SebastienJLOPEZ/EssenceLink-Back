@@ -11,5 +11,5 @@ public class ELDatabaseSettings
     public string CommandCollectionName { get; set; } = null!;
     public string CommandProductCollectionName { get; set; } = null!;
     public string WishlistCollectionName { get; set; } = null!;
-
+    public string AdressesCollectionName { get; set; } = null!;
 }

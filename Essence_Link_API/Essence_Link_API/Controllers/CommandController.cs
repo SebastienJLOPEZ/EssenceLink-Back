@@ -18,12 +18,12 @@ public class CommandController : Controller
         _CommandService = CommandService;
 
     [HttpGet]
-    [Authorize]
+    
     public async Task<List<Command>> Get() =>
         await _CommandService.GetAsync();
 
     [HttpGet("{id:length(24)}")]
-    [Authorize]
+    
     public async Task<ActionResult<Command>> Get(string id)
     {
         var Command = await _CommandService.GetAsync(id);
@@ -37,7 +37,7 @@ public class CommandController : Controller
     }
 
     [HttpPost]
-    [Authorize]
+    
     public async Task<IActionResult> Post(Command newCommand)
     {
         await _CommandService.CreateAsync(newCommand);
@@ -46,7 +46,7 @@ public class CommandController : Controller
     }
 
     [HttpPut("{id:length(24)}")]
-    [Authorize]
+    
     public async Task<IActionResult> Update(string id, Command updatedCommand)
     {
         //TODO:

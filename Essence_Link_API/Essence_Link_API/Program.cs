@@ -11,31 +11,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy(name: "BaseAccess",
+    options.AddPolicy("BaseAccess",
         policy =>
         {
             policy
-            .WithOrigins("http://localhost:8080/*")
-            .AllowAnyMethod()
-            .AllowAnyHeader();
+            .WithOrigins("http://localhost:8080")
+            .WithMethods("POST", "GET", "PUT", "DELETE")
+            .WithHeaders("*");
         }
         );
-    options.AddPolicy("ClientAdminAccess",
-        policy =>
-        {
-            policy
-              .WithOrigins("http://localhost:8080/ClientAdmin/")
-              .AllowAnyMethod()
-              .AllowAnyHeader();
-        });
-    options.AddPolicy("ProductAdminAccess",
-        policy =>
-        {
-            policy
-              .WithOrigins("http://localhost:8080/ProductAdmin/")
-              .AllowAnyMethod()
-              .AllowAnyHeader();
-        });
 });
 
 builder.Services.Configure<ELDatabaseSettings>(
@@ -49,6 +33,7 @@ builder.Services.AddSingleton<CommandService>();
 builder.Services.AddSingleton<CommandProductService>();
 builder.Services.AddSingleton<ProductService>();
 builder.Services.AddSingleton<WishlistService>();
+builder.Services.AddSingleton<AdressesService>();
 
 builder.Services.AddControllers()
     .AddJsonOptions(
@@ -74,7 +59,6 @@ app.UseRouting();
 app.UseCors();
 
 app.UseAuthorization();
-
 app.MapControllers();
-
 app.Run();
+

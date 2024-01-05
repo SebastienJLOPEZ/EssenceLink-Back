@@ -32,8 +32,8 @@ public class UserService
         await _UserCollection.InsertOneAsync(newUser);
 
     public async Task UpdateAsync(string id, User updatedUser) =>
-        await _UserCollection.ReplaceOneAsync(x => x.Id == id, updatedUser);
+        await _UserCollection.ReplaceOneAsync(x => x.Email == id, updatedUser);
 
     public async Task RemoveAsync(string id) =>
-        await _UserCollection.DeleteOneAsync(x => x.Id == id);
+        await _UserCollection.DeleteOneAsync(x => x.Email == id);
 }

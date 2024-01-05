@@ -19,18 +19,18 @@ public class WishlistController : Controller
         _WishlistService = WishlistService;
 
     [HttpGet]
-    [Authorize]
+    
     public async Task<List<Wishlist>> Get() =>
         await _WishlistService.GetAsync();
 
     [HttpGet("{id:length(24)}")]
-    [Authorize]
+    
     public async Task<List<Wishlist>> Get(string id) =>
         await _WishlistService.GetAsync(id);
 
 
     [HttpPost]
-    [Authorize]
+    
     public async Task<IActionResult> Post(Wishlist newWishlist)
     {
         await _WishlistService.CreateAsync(newWishlist);
@@ -39,7 +39,7 @@ public class WishlistController : Controller
     }
 
     [HttpDelete("{id;length(24)}")]
-    [Authorize]
+    
     public async Task<IActionResult> Delete(string id)
     {
         //TODO:
