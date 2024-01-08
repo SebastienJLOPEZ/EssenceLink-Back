@@ -35,11 +35,11 @@ public class ProductController : Controller
         return Product;
     }
 
-    [HttpGet("{Type}")]
-    public async Task<List<Product>> GetT(string type) =>
-        await _ProductService.GetAsyncT(type);
+    [HttpGet("Boisson/")] //Will be change later, with 6 others but with precision of what I want to send.
+    public async Task<List<Product>> GetDrink() =>
+        await _ProductService.GetAsyncDrink();
 
-    [HttpGet("SearchTerm")]
+    [HttpGet("Search/{SearchTerm}")]
     public async Task<List<Product>> GetN(string searchTerm) =>
         await _ProductService.GetAsyncN(searchTerm);
 

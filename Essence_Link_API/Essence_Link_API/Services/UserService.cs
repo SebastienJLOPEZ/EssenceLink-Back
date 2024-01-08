@@ -25,8 +25,9 @@ public class UserService
 
     public async Task<User?> GetAsync(string id) =>
         await _UserCollection.Find(x => x.Email == id).FirstOrDefaultAsync();
-
-    //TODO : Code to find lastest element of list
+    public async Task<List<User>> GetAsyncSearch(string name) =>
+        await _UserCollection.Find(x => x.FirstName.ToLower().Contains(name.ToLower()) 
+                        || x.LastName.ToLower().Contains(name.ToLower())).ToListAsync();
 
     public async Task CreateAsync(User newUser) =>
         await _UserCollection.InsertOneAsync(newUser);

@@ -27,12 +27,13 @@ public class ProductService
         await _ProductCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
     public async Task<List<Product>> GetAsyncN(string searchTerm) =>
-        await _ProductCollection.Find(x => x.Name.Contains(searchTerm)).ToListAsync();
+        await _ProductCollection.Find(x => x.Name.ToLower().Contains(searchTerm.ToLower())
+                        || x.Id.ToLower().Contains(searchTerm.ToLower())).ToListAsync();
     // TODO :
     // Either modify GetAsyncN to also search in type, or create one for type
 
-    public async Task<List<Product>> GetAsyncT(string type) =>
-        await _ProductCollection.Find(x => x.Type == type).ToListAsync();
+    public async Task<List<Product>> GetAsyncDrink() =>
+        await _ProductCollection.Find(x => x.Type == "Boisson").ToListAsync();
 
     //TODO :
     // GetAsyncP -> Using range of price

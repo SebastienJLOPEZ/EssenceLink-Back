@@ -1,0 +1,141 @@
+[{
+  "_id": {
+    "$oid": "656e52697304f2c128ff7b2f"
+  },
+  "FirstName": "Sébastien",
+  "LastName": "LOPEZ",
+  "Email": "exemple6@gmail.com",
+  "Number": "0",
+  "Role": "Client",
+  "BDate": "",
+  "SignInDate": ""
+},
+{
+  "_id": {
+    "$oid": "6579c2ae92122e9cf95b6ced"
+  },
+  "FirstName": "David",
+  "LastName": "PETIT",
+  "Email": "exemple9@gmail.com",
+  "Number": "0",
+  "Role": "AdminClient",
+  "BDate": "",
+  "SignInDate": ""
+},
+{
+  "_id": {
+    "$oid": "65958361f7201147394755fd"
+  },
+  "FirstName": "TEST",
+  "LastName": "TEST",
+  "Email": "exemple9991@example.com",
+  "Number": "0",
+  "Role": "Client",
+  "BDate": "",
+  "SignInDate": "",
+  "Status": ""
+},
+{
+  "_id": {
+    "$oid": "65958368f7201147394755fe"
+  },
+  "FirstName": "TEST",
+  "LastName": "TEST",
+  "Email": "exemple9992@example.com",
+  "Number": "0",
+  "Role": "Client",
+  "BDate": "",
+  "SignInDate": "",
+  "Status": ""
+},
+{
+  "_id": {
+    "$oid": "6595836cf7201147394755ff"
+  },
+  "FirstName": "TEST",
+  "LastName": "TEST",
+  "Email": "exemple9993@example.com",
+  "Number": "0",
+  "Role": "Client",
+  "BDate": "",
+  "SignInDate": "",
+  "Status": ""
+},
+{
+  "_id": {
+    "$oid": "65958370f720114739475600"
+  },
+  "FirstName": "TEST",
+  "LastName": "TEST",
+  "Email": "exemple9994@example.com",
+  "Number": "0",
+  "Role": "Client",
+  "BDate": "",
+  "SignInDate": "",
+  "Status": ""
+},
+{
+  "_id": {
+    "$oid": "65958374f720114739475601"
+  },
+  "FirstName": "TEST",
+  "LastName": "TEST",
+  "Email": "exemple9995@example.com",
+  "Number": "0",
+  "Role": "Client",
+  "BDate": "",
+  "SignInDate": "",
+  "Status": ""
+},
+{
+  "_id": {
+    "$oid": "65958378f720114739475602"
+  },
+  "FirstName": "TEST",
+  "LastName": "TEST",
+  "Email": "exemple9996@example.com",
+  "Number": "0",
+  "Role": "Client",
+  "BDate": "",
+  "SignInDate": "",
+  "Status": ""
+},
+{
+  "_id": {
+    "$oid": "6595837cf720114739475603"
+  },
+  "FirstName": "TEST",
+  "LastName": "TEST",
+  "Email": "exemple9997@example.com",
+  "Number": "0123456",
+  "Role": "Client",
+  "BDate": "",
+  "SignInDate": "",
+  "Status": ""
+},
+{
+  "_id": {
+    "$oid": "65958380f720114739475604"
+  },
+  "FirstName": "TEST",
+  "LastName": "TEST",
+  "Email": "exemple9998@example.com",
+  "Number": "0646649228",
+  "Role": "Client",
+  "BDate": "",
+  "SignInDate": "",
+  "Status": "Active"
+},
+{
+  "_id": {
+    "$oid": "659bdb412c0ddbfa86ded470"
+  },
+  "FirstName": "Émilie",
+  "LastName": "LEFEVRE",
+  "Email": "elefevre@gmail.com",
+  "Number": "Not Defined",
+  "Role": "AdminProduct",
+  "BDate": "",
+  "SignInDate": "2024-01-08T11:23:44.347Z",
+  "Status": "Activate"
+}]

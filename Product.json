@@ -1,0 +1,336 @@
+[{
+  "_id": {
+    "$oid": "659bb2c9406e6bdec2c44f46"
+  },
+  "Name": "Hydrolat de Rose",
+  "Price": "15.99",
+  "Quantity": 50,
+  "Type": "Hydrolat",
+  "Description": "Une brume rafraîchissante aux propriétés hydratantes de l'eau de rose.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.5"
+},
+{
+  "_id": {
+    "$oid": "659bb2f5406e6bdec2c44f48"
+  },
+  "Name": "Spray Calmant à la Camomille",
+  "Price": "14.49",
+  "Quantity": 75,
+  "Type": "Hydrolat",
+  "Description": "Une brume apaisante pour le visage infusée d'extraits de camomille.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.5"
+},
+{
+  "_id": {
+    "$oid": "659bb300406e6bdec2c44f49"
+  },
+  "Name": "Brume Faciale Tonifiante aux Agrumes",
+  "Price": "11.99",
+  "Quantity": 80,
+  "Type": "Hydrolat",
+  "Description": "Brume énergisante avec le parfum revigorant des agrumes.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.0"
+},
+{
+  "_id": {
+    "$oid": "659bb30a406e6bdec2c44f4a"
+  },
+  "Name": "Brume Hydratante Lavande Rose",
+  "Price": "16.99",
+  "Quantity": 60,
+  "Type": "Hydrolat",
+  "Description": "Une brume hydratante combinant les bienfaits des extraits de lavande et de rose.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.7"
+},
+{
+  "_id": {
+    "$oid": "659bb343406e6bdec2c44f4b"
+  },
+  "Name": "Vin Rouge Bio",
+  "Price": "19.99",
+  "Quantity": 20,
+  "Type": "Boisson",
+  "Description": "Vin rouge biologique aux arômes riches et équilibrés.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.3"
+},
+{
+  "_id": {
+    "$oid": "659bb34f406e6bdec2c44f4c"
+  },
+  "Name": "Bières Artisanales Assorties",
+  "Price": "24.99",
+  "Quantity": 15,
+  "Type": "Boisson",
+  "Description": "Assortiment de bières artisanales pour une expérience de dégustation unique.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.8"
+},
+{
+  "_id": {
+    "$oid": "659bb367406e6bdec2c44f4d"
+  },
+  "Name": "Boisson Énergisante Naturelle",
+  "Price": "14.99",
+  "Quantity": 25,
+  "Type": "Boisson",
+  "Description": "Boisson énergisante naturelle pour un coup de pouce rafraîchissant.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.4"
+},
+{
+  "_id": {
+    "$oid": "659bb407406e6bdec2c44f4e"
+  },
+  "Name": "Brume Rafraîchissante Citronnée",
+  "Price": "19.49",
+  "Quantity": 18,
+  "Type": "Hydrolat",
+  "Description": "Brume aromatique citronnée pour une atmosphère rafraîchissante et stimulante.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.5"
+},
+{
+  "_id": {
+    "$oid": "659bb459406e6bdec2c44f50"
+  },
+  "Name": "Thé Vert à la Menthe Fraîche",
+  "Price": "14.99",
+  "Quantity": 35,
+  "Type": "Thé - Tisane",
+  "Description": "Thé vert associé à la fraîcheur de la menthe pour une expérience revitalisante.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.5"
+},
+{
+  "_id": {
+    "$oid": "659bb464406e6bdec2c44f51"
+  },
+  "Name": "Thé Vert Jasmin Délicat",
+  "Price": "16.49",
+  "Quantity": 30,
+  "Type": "Thé - Tisane",
+  "Description": "Thé vert au parfum délicat de jasmin, une infusion florale et apaisante.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.5"
+},
+{
+  "_id": {
+    "$oid": "659bb4a7406e6bdec2c44f52"
+  },
+  "Name": "Thé Noir Earl Grey Classique",
+  "Price": "13.49",
+  "Quantity": 30,
+  "Type": "Thé - Tisane",
+  "Description": "Thé noir Earl Grey classique avec une touche d'huile de bergamote.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.5"
+},
+{
+  "_id": {
+    "$oid": "659bb4cb406e6bdec2c44f53"
+  },
+  "Name": "Thé Noir Chai Épicé",
+  "Price": "17.99",
+  "Quantity": 20,
+  "Type": "Thé - Tisane",
+  "Description": "Thé noir chai épicé, mélange savoureux d'épices et de thé noir.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.8"
+},
+{
+  "_id": {
+    "$oid": "659bb4ee406e6bdec2c44f54"
+  },
+  "Name": "Herbes de Provence Biologiques",
+  "Price": "8.99",
+  "Quantity": 50,
+  "Type": "Plantes Sèches",
+  "Description": "Mélange d'herbes de Provence biologiques pour rehausser vos plats.",
+  "DateAdded": "2024-01-05",
+  "Score": "4"
+},
+{
+  "_id": {
+    "$oid": "659bb514406e6bdec2c44f55"
+  },
+  "Name": "Romarin Bio Séché",
+  "Price": "6.49",
+  "Quantity": 60,
+  "Type": "Plantes Sèches",
+  "Description": "Romarin biologique séché pour une saveur intense et aromatique.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.0"
+},
+{
+  "_id": {
+    "$oid": "659bb528406e6bdec2c44f56"
+  },
+  "Name": "Feuilles de Laurier Séchées",
+  "Price": "9.99",
+  "Quantity": 40,
+  "Type": "Plantes Sèches",
+  "Description": "Feuilles de laurier biologiques séchées, un incontournable de la cuisine.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.4"
+},
+{
+  "_id": {
+    "$oid": "659bb73b406e6bdec2c44f57"
+  },
+  "Name": "Cumin Moulu Bio",
+  "Price": "7.99",
+  "Quantity": 40,
+  "Type": "Plantes Sèches",
+  "Description": "Cumin biologique moulu, parfait pour de nombreux plats.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.3"
+},
+{
+  "_id": {
+    "$oid": "659bb74c406e6bdec2c44f58"
+  },
+  "Name": "Kit Élixir de Gemmes - Énergie Positive",
+  "Price": "29.99",
+  "Quantity": 5,
+  "Type": "Gemmothérapie",
+  "Description": "Kit d'élixir de gemmes pour favoriser l'énergie positive et la vitalité.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.8"
+},
+{
+  "_id": {
+    "$oid": "659bb764406e6bdec2c44f59"
+  },
+  "Name": "Kit Élixir de Gemmes - Sérénité Intérieure",
+  "Price": "32.49",
+  "Quantity": 4,
+  "Type": "Gémmothérapie",
+  "Description": "Kit d'élixir de gemmes pour promouvoir la sérénité intérieure et la paix.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.9"
+},
+{
+  "_id": {
+    "$oid": "659bb774406e6bdec2c44f5a"
+  },
+  "Name": "Kit Élixir de Gemmes - Harmonie Spirituelle",
+  "Price": "27.99",
+  "Quantity": 6,
+  "Type": "Gemmothérapie",
+  "Description": "Kit d'élixir de gemmes pour une harmonie spirituelle et un équilibre intérieur.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.7"
+},
+{
+  "_id": {
+    "$oid": "659bb85a406e6bdec2c44f5b"
+  },
+  "Name": "Sérum Régénérant aux Extraits de Bourgeons",
+  "Price": "49.99",
+  "Quantity": 15,
+  "Type": "Gemmothérapie",
+  "Description": "Sérum régénérant enrichi aux extraits de bourgeons pour une peau éclatante.",
+  "DateAdded": "2024-01-05",
+  "Score": "3"
+},
+{
+  "_id": {
+    "$oid": "659bb871406e6bdec2c44f5c"
+  },
+  "Name": "Crème Hydratante à la Sève de Jeunes Pousses",
+  "Price": "34.79",
+  "Quantity": 20,
+  "Type": "Gemmothérapie",
+  "Description": "Crème hydratante formulée avec la sève de jeunes pousses pour une peau nourrie.",
+  "DateAdded": "2024-01-05",
+  "Score": "3.5"
+},
+{
+  "_id": {
+    "$oid": "659bb87e406e6bdec2c44f5d"
+  },
+  "Name": "Baume Apaisant aux Extraits de Gemmes",
+  "Price": "27.49",
+  "Quantity": 12,
+  "Type": "Gemmothérapie",
+  "Description": "Baume apaisant infusé aux extraits de gemmes pour calmer et revitaliser la peau.",
+  "DateAdded": "2024-01-05",
+  "Score": "1"
+},
+{
+  "_id": {
+    "$oid": "659bb88e406e6bdec2c44f5e"
+  },
+  "Name": "Huile Infusée à la Lavande",
+  "Price": "14.99",
+  "Quantity": 25,
+  "Type": "Aromates",
+  "Description": "Huile infusée à la lavande pour ajouter une saveur délicate à vos plats.",
+  "DateAdded": "2024-01-05",
+  "Score": "2.5"
+},
+{
+  "_id": {
+    "$oid": "659bb898406e6bdec2c44f5f"
+  },
+  "Name": "Huile Infusée au Romarin",
+  "Price": "12.49",
+  "Quantity": 30,
+  "Type": "Aromates",
+  "Description": "Huile infusée au romarin pour une touche d'arôme méditerranéen dans vos recettes.",
+  "DateAdded": "2024-01-05",
+  "Score": "3.5"
+},
+{
+  "_id": {
+    "$oid": "659bb8b9406e6bdec2c44f60"
+  },
+  "Name": "Huile Infusée au Thym",
+  "Price": "13.79",
+  "Quantity": 28,
+  "Type": "Aromates",
+  "Description": "Huile infusée au thym pour intensifier la saveur de vos plats préférés.",
+  "DateAdded": "2024-01-05",
+  "Score": "4.5"
+},
+{
+  "_id": {
+    "$oid": "659bb8c8406e6bdec2c44f61"
+  },
+  "Name": "Sachets d'Herbes de Provence",
+  "Price": "9.99",
+  "Quantity": 40,
+  "Type": "Aromates",
+  "Description": "Sachets d'herbes de Provence pour parfumer délicieusement vos plats.",
+  "DateAdded": "2024-01-05",
+  "Score": "5"
+},
+{
+  "_id": {
+    "$oid": "659bb8d3406e6bdec2c44f62"
+  },
+  "Name": "Mélange d'Herbes pour Infusion",
+  "Price": "8.49",
+  "Quantity": 35,
+  "Type": "Aromates",
+  "Description": "Mélange d'herbes pour infusion afin de préparer une boisson relaxante.",
+  "DateAdded": "2024-01-05",
+  "Score": "3.5"
+},
+{
+  "_id": {
+    "$oid": "659bb8e1406e6bdec2c44f63"
+  },
+  "Name": "Sachets d'Herbes Citronnées",
+  "Price": "10.29",
+  "Quantity": 38,
+  "Type": "Aromates",
+  "Description": "Sachets d'herbes citronnées pour une touche de fraîcheur dans vos plats.",
+  "DateAdded": "2024-01-05",
+  "Score": "3.5"
+}]

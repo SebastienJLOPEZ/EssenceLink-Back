@@ -1,0 +1,36 @@
+[{
+  "_id": {
+    "$oid": "659bdbf22c0ddbfa86ded471"
+  },
+  "Name": "Boisson"
+},
+{
+  "_id": {
+    "$oid": "659bdc2b2c0ddbfa86ded472"
+  },
+  "Name": "Thé - Tisane"
+},
+{
+  "_id": {
+    "$oid": "659bdc3d2c0ddbfa86ded473"
+  },
+  "Name": "Aromates"
+},
+{
+  "_id": {
+    "$oid": "659bdc4d2c0ddbfa86ded474"
+  },
+  "Name": "Plantes Sèches"
+},
+{
+  "_id": {
+    "$oid": "659bdc822c0ddbfa86ded475"
+  },
+  "Name": "Gemmothérapie"
+},
+{
+  "_id": {
+    "$oid": "659bdca92c0ddbfa86ded476"
+  },
+  "Name": "Hydrolat"
+}]

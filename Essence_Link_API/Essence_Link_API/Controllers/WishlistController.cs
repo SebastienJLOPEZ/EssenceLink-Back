@@ -33,6 +33,9 @@ public class WishlistController : Controller
     
     public async Task<IActionResult> Post(Wishlist newWishlist)
     {
+        //if (newWishlist.ProductId)
+        // TODO : Add checker if already added for user
+
         await _WishlistService.CreateAsync(newWishlist);
 
         return CreatedAtAction(nameof(Get), new { id = newWishlist.Id }, newWishlist);
