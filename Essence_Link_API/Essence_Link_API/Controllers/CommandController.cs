@@ -22,6 +22,10 @@ public class CommandController : Controller
     public async Task<List<Command>> Get() =>
         await _CommandService.GetAsync();
 
+    [HttpGet("ByUser/{id:length(24)}")]
+    public async Task<List<Command>> GetBU(string id) =>
+        await _CommandService.GetAsyncBU(id);
+
     [HttpGet("{id:length(24)}")]
     
     public async Task<ActionResult<Command>> Get(string id)

@@ -12,6 +12,7 @@ public class Command
     public decimal TotalPrice { get; set; }
     public string Shipment_Status { get; set; } = null!;
     public string Shipping_Address { get; set; } = null!;
+    public string Paiement_Type { get; set; } = null!;
     public string Date { get; set; } = null!;
 
 }

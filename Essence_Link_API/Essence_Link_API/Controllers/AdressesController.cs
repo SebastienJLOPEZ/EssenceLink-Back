@@ -17,9 +17,19 @@ public class AdressesController : Controller
     public AdressesController(AdressesService AdressesService) =>
         _AdressesService = AdressesService;
 
+    //Fetch All Addresses
+
     [HttpGet]
     public async Task<List<Adresses>> Get() =>
         await _AdressesService.GetAsync();
+
+    //Fetch All Addresses of One User
+
+    [HttpGet("ByUser/{uid}")]
+    public async Task<List<Adresses>> GetUList(string uid) =>
+        await _AdressesService.GetAsyncUList(uid);
+
+    //Fetch One Address
 
     [HttpGet("adress/{id}")]
     public async Task<ActionResult<Adresses>> Get(string id)
@@ -34,16 +44,23 @@ public class AdressesController : Controller
         return Adresses;
     }
 
-    [HttpGet("{uid}")]
-    public async Task<List<Adresses>> GetUList(string uid) =>
-        await _AdressesService.GetAsyncUList(uid);
 
     [HttpPost]
     public async Task<IActionResult> Post(Adresses newAdresses)
     {
-        await _AdressesService.CreateAsync(newAdresses);
+        int existingAddressCount = (await _AdressesService.GetAsyncUList(newAdresses.UserId)).Count();
 
-        return CreatedAtAction(nameof(Get), new { id = newAdresses.Id }, newAdresses);
+        // Si le nombre d'adresses existantes est inférieur à 2, enregistrez la nouvelle adresse
+        if (existingAddressCount < 2)
+        {
+            await _AdressesService.CreateAsync(newAdresses);
+            return CreatedAtAction(nameof(Get), new { id = newAdresses.Id }, newAdresses);
+        }
+        else
+        {
+            // Retourner une réponse indiquant que le nombre maximum d'adresses est atteint
+            return BadRequest("Maximum number of addresses reached for the user.");
+        }
     }
 
     [HttpPut("{id}")]

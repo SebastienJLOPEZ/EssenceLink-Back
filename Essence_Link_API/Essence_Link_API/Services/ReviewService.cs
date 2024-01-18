@@ -26,6 +26,9 @@ public class ReviewService
     public async Task<Review?> GetAsync(string id) =>
         await _ReviewCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
+    public async Task<List<Review>> GetAsyncP(string pid) =>
+        await _ReviewCollection.Find(x => x.ProductId == pid).ToListAsync();
+
     public async Task<List<Review>> GetAsyncS (decimal stars) =>
         await _ReviewCollection.Find(x => x.Score == stars).ToListAsync();
 

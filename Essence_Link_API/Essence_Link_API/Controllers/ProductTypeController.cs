@@ -24,11 +24,11 @@ public class ProductTypeController : Controller
     public async Task<List<ProductType>> Get() =>
         await _ProductTypeService.GetAsync();
 
-    [HttpGet("{id:length(24)}")]
+    [HttpGet("{pid}")]
     //
-    public async Task<ActionResult<ProductType>> Get(string id)
+    public async Task<ActionResult<ProductType>> Get(string pid)
     {
-        var ProductType = await _ProductTypeService.GetAsync(id);
+        var ProductType = await _ProductTypeService.GetAsync(pid);
 
         if (ProductType is null)
         {

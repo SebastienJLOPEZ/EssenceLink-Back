@@ -24,7 +24,7 @@ public class ProductTypeService
         await _ProductTypeCollection.Find(_ => true).ToListAsync();
 
     public async Task<ProductType?> GetAsync(string id) =>
-        await _ProductTypeCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
+        await _ProductTypeCollection.Find(x => /*x.Id == id ||*/ x.Name == id).FirstOrDefaultAsync();
 
     public async Task CreateAsync(ProductType newProductType) =>
         await _ProductTypeCollection.InsertOneAsync(newProductType);

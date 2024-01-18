@@ -1,1 +1,54 @@
-[]
+[{
+  "_id": {
+    "$oid": "65a2c07ea645458edaf84f54"
+  },
+  "ProductId": "659bb74c406e6bdec2c44f58",
+  "CommandId": "65a2c07da645458edaf84f53",
+  "Quantity": 1,
+  "TotalPrice": "29.99"
+},
+{
+  "_id": {
+    "$oid": "65a2c1a0a645458edaf84f57"
+  },
+  "ProductId": "659bb74c406e6bdec2c44f58",
+  "CommandId": "65a2c19fa645458edaf84f56",
+  "Quantity": 1,
+  "TotalPrice": "29.99"
+},
+{
+  "_id": {
+    "$oid": "65a2c230a645458edaf84f59"
+  },
+  "ProductId": "659bb343406e6bdec2c44f4b",
+  "CommandId": "65a2c230a645458edaf84f58",
+  "Quantity": 1,
+  "TotalPrice": "19.99"
+},
+{
+  "_id": {
+    "$oid": "65a2c320a645458edaf84f5b"
+  },
+  "ProductId": "659bb88e406e6bdec2c44f5e",
+  "CommandId": "65a2c320a645458edaf84f5a",
+  "Quantity": 1,
+  "TotalPrice": "14.99"
+},
+{
+  "_id": {
+    "$oid": "65a642d3ae0d976d9742a83c"
+  },
+  "ProductId": "659bb367406e6bdec2c44f4d",
+  "CommandId": "65a642d3ae0d976d9742a83b",
+  "Quantity": 1,
+  "TotalPrice": "14.99"
+},
+{
+  "_id": {
+    "$oid": "65a7e991cf64ae9b0e6062ce"
+  },
+  "ProductId": "659bb2c9406e6bdec2c44f46",
+  "CommandId": "65a7e991cf64ae9b0e6062cd",
+  "Quantity": 2,
+  "TotalPrice": "31.98"
+}]

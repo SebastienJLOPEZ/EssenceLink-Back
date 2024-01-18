@@ -1,0 +1,18 @@
+[{
+  "_id": {
+    "$oid": "65a133d9451be8ff2d5ccaa2"
+  },
+  "UserId": "656e52697304f2c128ff7b2f",
+  "NumberName": "104 Parc des Sources",
+  "PostalCode": "932200",
+  "City": "Gagny"
+},
+{
+  "_id": {
+    "$oid": "65a7ea03cf64ae9b0e6062cf"
+  },
+  "UserId": "65a7e903cf64ae9b0e6062cb",
+  "NumberName": "12 Rue de la Paix",
+  "PostalCode": "75002",
+  "City": "Paris"
+}]

@@ -1,1 +1,10 @@
-[]
+[{
+  "_id": {
+    "$oid": "65a2cc19b8541b52cc6b558f"
+  },
+  "UserId": "65958374f720114739475601",
+  "ProductId": "659bb459406e6bdec2c44f50",
+  "Score": "4.5",
+  "ReviewText": "Très bon gout, la quantité de menthe est juste ce qu'il faut",
+  "Date": "2024-01-08T11:23:44.347Z"
+}]

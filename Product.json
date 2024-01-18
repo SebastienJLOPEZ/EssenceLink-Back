@@ -101,10 +101,11 @@
   "Name": "Thé Vert à la Menthe Fraîche",
   "Price": "14.99",
   "Quantity": 35,
-  "Type": "Thé - Tisane",
+  "Type": "Tisane & Plante Sèche",
+  "SubType": "Tisane",
   "Description": "Thé vert associé à la fraîcheur de la menthe pour une expérience revitalisante.",
   "DateAdded": "2024-01-05",
-  "Score": "4.5"
+  "Score": "2"
 },
 {
   "_id": {
@@ -113,7 +114,7 @@
   "Name": "Thé Vert Jasmin Délicat",
   "Price": "16.49",
   "Quantity": 30,
-  "Type": "Thé - Tisane",
+  "Type": "Tisane & Plante Sèche",
   "Description": "Thé vert au parfum délicat de jasmin, une infusion florale et apaisante.",
   "DateAdded": "2024-01-05",
   "Score": "4.5"
@@ -125,7 +126,7 @@
   "Name": "Thé Noir Earl Grey Classique",
   "Price": "13.49",
   "Quantity": 30,
-  "Type": "Thé - Tisane",
+  "Type": "Tisane & Plante Sèche",
   "Description": "Thé noir Earl Grey classique avec une touche d'huile de bergamote.",
   "DateAdded": "2024-01-05",
   "Score": "4.5"
@@ -137,7 +138,7 @@
   "Name": "Thé Noir Chai Épicé",
   "Price": "17.99",
   "Quantity": 20,
-  "Type": "Thé - Tisane",
+  "Type": "Tisane & Plante Sèche",
   "Description": "Thé noir chai épicé, mélange savoureux d'épices et de thé noir.",
   "DateAdded": "2024-01-05",
   "Score": "4.8"
@@ -149,7 +150,7 @@
   "Name": "Herbes de Provence Biologiques",
   "Price": "8.99",
   "Quantity": 50,
-  "Type": "Plantes Sèches",
+  "Type": "Aromate",
   "Description": "Mélange d'herbes de Provence biologiques pour rehausser vos plats.",
   "DateAdded": "2024-01-05",
   "Score": "4"
@@ -161,7 +162,7 @@
   "Name": "Romarin Bio Séché",
   "Price": "6.49",
   "Quantity": 60,
-  "Type": "Plantes Sèches",
+  "Type": "Aromate",
   "Description": "Romarin biologique séché pour une saveur intense et aromatique.",
   "DateAdded": "2024-01-05",
   "Score": "4.0"
@@ -173,7 +174,7 @@
   "Name": "Feuilles de Laurier Séchées",
   "Price": "9.99",
   "Quantity": 40,
-  "Type": "Plantes Sèches",
+  "Type": "Tisane & Plante Sèche",
   "Description": "Feuilles de laurier biologiques séchées, un incontournable de la cuisine.",
   "DateAdded": "2024-01-05",
   "Score": "4.4"
@@ -185,7 +186,7 @@
   "Name": "Cumin Moulu Bio",
   "Price": "7.99",
   "Quantity": 40,
-  "Type": "Plantes Sèches",
+  "Type": "Aromate",
   "Description": "Cumin biologique moulu, parfait pour de nombreux plats.",
   "DateAdded": "2024-01-05",
   "Score": "4.3"

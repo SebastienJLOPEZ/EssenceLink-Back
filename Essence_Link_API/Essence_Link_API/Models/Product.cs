@@ -12,6 +12,7 @@ public class Product
     public decimal Price { get; set; }
     public int Quantity { get; set; }
     public string Type { get; set; } = null!;
+    public string SubType { get; set; } = null!;
     public string Description { get; set; } = null!;
     public string DateAdded { get; set; } = null!;
     public decimal Score { get; set; }

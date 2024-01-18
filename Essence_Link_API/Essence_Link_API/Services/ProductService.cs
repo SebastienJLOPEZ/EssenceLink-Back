@@ -28,12 +28,23 @@ public class ProductService
 
     public async Task<List<Product>> GetAsyncN(string searchTerm) =>
         await _ProductCollection.Find(x => x.Name.ToLower().Contains(searchTerm.ToLower())
-                        || x.Id.ToLower().Contains(searchTerm.ToLower())).ToListAsync();
-    // TODO :
-    // Either modify GetAsyncN to also search in type, or create one for type
-
+                        || x.Description.ToLower().Contains(searchTerm.ToLower())).ToListAsync();
+    
+    // Fetch By Product Type
+    public async Task<List<Product>> GetAsyncHydro() =>
+        await _ProductCollection.Find(x => x.Type == "Hydrolat").ToListAsync();
+    public async Task<List<Product>> GetAsyncTnP() =>
+        await _ProductCollection.Find(x => x.Type == "Tisane & Plante Sèche").ToListAsync();
+    public async Task<List<Product>> GetAsyncGem() =>
+        await _ProductCollection.Find(x => x.Type == "Gemmothérapie").ToListAsync();
+    public async Task<List<Product>> GetAsyncArom() =>
+        await _ProductCollection.Find(x => x.Type == "Aromates").ToListAsync();
     public async Task<List<Product>> GetAsyncDrink() =>
         await _ProductCollection.Find(x => x.Type == "Boisson").ToListAsync();
+    
+    // Fetch By Product Subtype
+    public async Task<List<Product>> GetAsyncDrinkNA() =>
+        await _ProductCollection.Find(x => x.Type == "Boisson" && x.SubType == "SansAlcool").ToListAsync();
 
     //TODO :
     // GetAsyncP -> Using range of price
@@ -47,3 +58,6 @@ public class ProductService
     public async Task RemoveAsync(string id) =>
         await _ProductCollection.DeleteOneAsync(x => x.Id == id);
 }
+// TODO :
+// Create GetAsync specialized for each Subtype
+// Make sure not be able to add twice the same product

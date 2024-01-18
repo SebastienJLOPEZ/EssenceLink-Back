@@ -36,8 +36,11 @@ public class ReviewController : Controller
         return Review;
     }
 
-    [HttpGet("{Stars}")]
-    
+    [HttpGet("ByProduct/{pid}")]
+    public async Task<List<Review>> GetP(string pid) =>
+        await _ReviewService.GetAsyncP(pid);
+
+    [HttpGet("{stars}")]
     public async Task<List<Review>> GetS(decimal stars) =>
         await _ReviewService.GetAsyncS(stars);
 

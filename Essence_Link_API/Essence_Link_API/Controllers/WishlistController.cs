@@ -23,7 +23,7 @@ public class WishlistController : Controller
     public async Task<List<Wishlist>> Get() =>
         await _WishlistService.GetAsync();
 
-    [HttpGet("{id:length(24)}")]
+    [HttpGet("ByUser/{id:length(24)}")]
     
     public async Task<List<Wishlist>> Get(string id) =>
         await _WishlistService.GetAsync(id);
@@ -41,12 +41,10 @@ public class WishlistController : Controller
         return CreatedAtAction(nameof(Get), new { id = newWishlist.Id }, newWishlist);
     }
 
-    [HttpDelete("{id;length(24)}")]
+    [HttpDelete("{id:length(24)}")]
     
     public async Task<IActionResult> Delete(string id)
     {
-        //TODO:
-        //Change it so it doesn't delete but hash it instead
         var Wishlist = await _WishlistService.GetAsync(id);
         if (Wishlist is null)
         {

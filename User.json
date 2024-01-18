@@ -138,4 +138,17 @@
   "BDate": "",
   "SignInDate": "2024-01-08T11:23:44.347Z",
   "Status": "Activate"
+},
+{
+  "_id": {
+    "$oid": "65a7e903cf64ae9b0e6062cb"
+  },
+  "FirstName": "Damien",
+  "LastName": "Dupond",
+  "Email": "dd@gmail.com",
+  "Number": "Not Defined",
+  "Role": "Client",
+  "BDate": "",
+  "SignInDate": "2024-01-17T14:49:37.009Z",
+  "Status": "Banned"
 }]

@@ -8,19 +8,13 @@
   "_id": {
     "$oid": "659bdc2b2c0ddbfa86ded472"
   },
-  "Name": "Thé - Tisane"
+  "Name": "Tisane & Plante Sèche"
 },
 {
   "_id": {
     "$oid": "659bdc3d2c0ddbfa86ded473"
   },
-  "Name": "Aromates"
-},
-{
-  "_id": {
-    "$oid": "659bdc4d2c0ddbfa86ded474"
-  },
-  "Name": "Plantes Sèches"
+  "Name": "Aromate"
 },
 {
   "_id": {

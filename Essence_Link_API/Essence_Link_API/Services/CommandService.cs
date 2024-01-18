@@ -23,6 +23,9 @@ public class CommandService
     public async Task<List<Command>> GetAsync() =>
         await _CommandCollection.Find(_ => true).ToListAsync();
 
+    public async Task<List<Command>> GetAsyncBU(string id) =>
+        await _CommandCollection.Find(x => x.UserId == id).ToListAsync();
+
     public async Task<Command?> GetAsync(string id) =>
         await _CommandCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
 
