@@ -25,6 +25,8 @@ public class ProductPictureService
 
     public async Task<ProductPicture?> GetAsync(string id) =>
         await _ProductPictureCollection.Find(x => x.Id == id).FirstOrDefaultAsync();
+    public async Task<ProductPicture?> GetAsyncByPID(string id) =>
+        await _ProductPictureCollection.Find(x => x.ProductId == id).FirstOrDefaultAsync();
 
     public async Task CreateAsync(ProductPicture newProductPicture) =>
         await _ProductPictureCollection.InsertOneAsync(newProductPicture);

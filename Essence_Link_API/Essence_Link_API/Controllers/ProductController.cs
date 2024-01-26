@@ -59,9 +59,25 @@ public class ProductController : Controller
 
     // Get by Product Subtype
 
-    [HttpGet("Boisson/SansAlcool")] //Will be change later, with 6 others but with precision of what I want to send.
-    public async Task<List<Product>> GetDrinkNA() =>
-        await _ProductService.GetAsyncDrink();
+    [HttpGet("Hydrolat/{subtype}")] //Will be change later, with 6 others but with precision of what I want to send.
+    public async Task<List<Product>> GetHydroST(string subtype) =>
+        await _ProductService.GetAsyncHydroST(subtype);
+
+    [HttpGet("Boisson/{subtype}")] //Will be change later, with 6 others but with precision of what I want to send.
+    public async Task<List<Product>> GetTnPST(string subtype) =>
+        await _ProductService.GetAsyncTnPST(subtype);
+
+    [HttpGet("Boisson/{subtype}")] //Will be change later, with 6 others but with precision of what I want to send.
+    public async Task<List<Product>> GetGemST(string subtype) =>
+        await _ProductService.GetAsyncGemST(subtype);
+
+    [HttpGet("Boisson/{subtype}")] //Will be change later, with 6 others but with precision of what I want to send.
+    public async Task<List<Product>> GetAromST(string subtype) =>
+        await _ProductService.GetAsyncAromST(subtype);
+
+    [HttpGet("Boisson/{subtype}")] //Will be change later, with 6 others but with precision of what I want to send.
+    public async Task<List<Product>> GetDrinkNA(string subtype) =>
+        await _ProductService.GetAsyncDrinkST(subtype);
 
     // Get by Research Term
 

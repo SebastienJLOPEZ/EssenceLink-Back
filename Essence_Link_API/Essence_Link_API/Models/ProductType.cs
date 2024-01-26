@@ -9,5 +9,7 @@ public class ProductType
     public string? Id { get; set; }
 
     public string Name { get; set; } = null!;
-
+    public string ImageNumber { get; set; } = null!;
+    public string Description { get; set; } = null!;
+    public List<string> Subtypes { get; set; }
 }

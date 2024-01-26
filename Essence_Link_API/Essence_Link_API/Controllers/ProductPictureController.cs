@@ -36,6 +36,20 @@ public class ProductPictureController : Controller
         return ProductPicture;
     }
 
+    [HttpGet("Product/{id}")]
+
+    public async Task<ActionResult<ProductPicture>> GetByPID (string id)
+    {
+        var ProductPicture = await _ProductPictureService.GetAsyncByPID(id);
+
+        if (ProductPicture is null)
+        {
+            return NotFound();
+        }
+
+        return ProductPicture;
+    }
+
     [HttpPost]
     
 

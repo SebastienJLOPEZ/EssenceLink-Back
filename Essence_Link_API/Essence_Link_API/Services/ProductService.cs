@@ -41,10 +41,20 @@ public class ProductService
         await _ProductCollection.Find(x => x.Type == "Aromates").ToListAsync();
     public async Task<List<Product>> GetAsyncDrink() =>
         await _ProductCollection.Find(x => x.Type == "Boisson").ToListAsync();
-    
+
     // Fetch By Product Subtype
-    public async Task<List<Product>> GetAsyncDrinkNA() =>
-        await _ProductCollection.Find(x => x.Type == "Boisson" && x.SubType == "SansAlcool").ToListAsync();
+
+    public async Task<List<Product>> GetAsyncHydroST(string subtype) =>
+        await _ProductCollection.Find(x => x.Type == "Hydrolat" && x.SubType == subtype).ToListAsync();
+    public async Task<List<Product>> GetAsyncTnPST(string subtype) =>
+        await _ProductCollection.Find(x => x.Type == "Tisane & Plante Sèche" && x.SubType == subtype).ToListAsync();
+    public async Task<List<Product>> GetAsyncGemST(string subtype) =>
+        await _ProductCollection.Find(x => x.Type == "Gemmothérapie" && x.SubType == subtype).ToListAsync();
+    public async Task<List<Product>> GetAsyncAromST(string subtype) =>
+        await _ProductCollection.Find(x => x.Type == "Aromates" && x.SubType == subtype).ToListAsync();
+
+    public async Task<List<Product>> GetAsyncDrinkST(string subtype) =>
+        await _ProductCollection.Find(x => x.Type == "Boisson" && x.SubType == subtype).ToListAsync();
 
     //TODO :
     // GetAsyncP -> Using range of price
